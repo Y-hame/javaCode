@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套循环流程图</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+
+<div class="mermaid">
+  graph TD
+    A[外层循环开始] --> B{外层条件检查}
+    B -->|条件为真| C[执行外层代码块]
+    C --> D[内层循环开始]
+    D --> E{内层条件检查}
+    E -->|条件为真| F[执行内层代码块]
+    F --> G[更新内层条件]
+    G --> E
+    E -->|条件为假| H[内层循环结束]
+    H --> I[更新外层条件]
+    I --> B
+    B -->|条件为假| J[外层循环结束]
+</div>
+
+</body>
+</html>

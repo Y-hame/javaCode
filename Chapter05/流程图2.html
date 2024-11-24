@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套条件判断流程图</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+
+<div class="mermaid">
+  graph TD
+    A[开始] --> B[输入数字a]
+    B --> C{a是3的倍数吗？}
+    C -->|是| D[输出1] --> G[结束]
+    C -->|否| E{a是5的倍数吗？}
+    E -->|是| F[输出2] --> G
+    E -->|否| H[输出3] --> G
+</div>
+
+</body>
+</html>
